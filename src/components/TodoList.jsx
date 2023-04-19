@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
 import './todoList.css'
@@ -7,6 +7,17 @@ export default function TodoList({ isDarkMode }) {
 
   const [todos, setTodos] = useState([])
   const [filter, setFilter] = useState('all')
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
+
+  useEffect(() => {
+    const savedTodos = JSON.parse(localStorage.getItem('todos'))
+    if (savedTodos) {
+      setTodos(savedTodos)
+    }
+  }, [])
 
   function handleAddTodo(todo) {
     setTodos([...todos, todo])
@@ -47,8 +58,10 @@ export default function TodoList({ isDarkMode }) {
   }
 
   function handleClearCompleted() {
-    const filtered = todos.filter(todo => !todo.completed)
-    setTodos(filtered)
+    if (window.confirm('Are you sure you want to clear all completed items?')) {
+      const filtered = todos.filter(todo => !todo.completed)
+      setTodos(filtered)
+    }
   }
 
   return (
@@ -67,7 +80,7 @@ export default function TodoList({ isDarkMode }) {
           
           
           <div className='list-footer'>
-            <p>{todos.length} items left</p>
+            <p>{filteredTodos().filter(todo => !todo.completed).length} items left</p>
 
             <div className='list-types'>
                 <p 

@@ -1,0 +1,51 @@
+.home-page-container-light {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-very-light-grayish-blue)
+}
+
+.home-page-container-dark {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-very-dark-blue)
+}
+
+.home-page-image {
+  display: block;
+  width: 100%;
+}
+
+.todo-container {
+  background-color: transparent;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: var(--color-light-gray)
+}
+
+.theme-icon {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

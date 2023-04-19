@@ -1,0 +1,113 @@
+.list-container {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42%;
+  width: 40%;
+  background-color: var(--color-light-gray);
+  color: var(--color-very-dark-grayish-blue);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size: 16px;
+}
+
+.list-container-dark {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42%;
+  width: 40%;
+  background-color: var(--color-very-dark-desaturated-blue);
+  color: var(--color-light-grayish-blue-dark-theme);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size: 16px;
+}
+
+.list-footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: .8rem;
+  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  color: var(--color-dark-grayish-blue-dark-theme);
+  font-weight: 700;
+}
+
+.list-types {
+  display: flex;
+}
+
+.action-items {
+  cursor: pointer;
+}
+
+.action-items:hover {
+  color: black;
+}
+
+.action-items-dark:hover {
+  color: var(--color-light-grayish-blue-dark-theme);
+  cursor: pointer;
+}
+
+.active {
+  margin: 0 10px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;;
+  padding: .8em 1.2em;
+  border-bottom: .5px solid hsl(236, 9%, 61%, 0.3);
+  width: 100%;
+}
+
+.cross-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.todo-circle {
+  border: 1px solid var(--color-dark-grayish-blue);
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+  margin-left: .18rem;
+}
+
+.todo-circle:hover {
+  border: 1px solid var(--color-bright-blue)
+}
+
+.todo-circle-checked {
+  background: linear-gradient(
+    to right bottom, hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  background-position: center;
+  background-size: cover;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-left: .25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-complete {
+  text-decoration: line-through;
+  color: var(--color-dark-grayish-blue);
+  opacity: .5;
+}

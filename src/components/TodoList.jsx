@@ -61,6 +61,7 @@ export default function TodoList({ isDarkMode }) {
               key={todo.id}
               onDeleteTodo={handleDeleteTodo}
               onMarkComplete={handleMarkComplete}
+              isDarkMode={isDarkMode}
             />
           ))}
           
@@ -71,13 +72,19 @@ export default function TodoList({ isDarkMode }) {
             <div className='list-types'>
                 <p 
                   onClick={() => handleFilterChange('all')}
-                  className={isDarkMode ? 'action-items-dark' : 'action-items'}>All</p>
+                  className={`${isDarkMode ? 'action-items-dark' : 'action-items'} 
+                  ${filter === 'all' ? 'active' : ''}`}
+                  >All</p>
                 <p 
                   onClick={() => handleFilterChange('active')}
-                  className={isDarkMode ? 'action-items-dark active' : 'action-items active'}>Active</p>
+                  className={`${isDarkMode ? 'action-items-dark center-active' : 'action-items center-active'} 
+                  ${filter === 'active' ? 'active' : ''}`}
+                  >Active</p>
                 <p 
                   onClick={() => handleFilterChange('completed')}
-                  className={isDarkMode ? 'action-items-dark' : 'action-items'}>Completed</p>
+                  className={`${isDarkMode ? 'action-items-dark' : 'action-items'} 
+                  ${filter === 'completed' ? 'active' : ''}`}
+                  >Completed</p>
             </div>
 
             <p 

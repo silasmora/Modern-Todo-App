@@ -24,11 +24,10 @@
 .todo-container {
   background-color: transparent;
   position: absolute;
-  top: 15%;
+  top: 13%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  
   width: 40%;
   display: flex;
   justify-content: space-between;
@@ -37,7 +36,7 @@
 
 .title {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 1rem;
   color: var(--color-light-gray)
 }

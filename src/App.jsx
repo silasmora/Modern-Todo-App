@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import './App.css'
 import Header from './components/Header'
-import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
+import './App.css'
 
 
-function App({handleAddTodo}) {
+function App() {
   
   const [isDarkMode, setIsDarkMode] = useState(false)
 
@@ -18,7 +17,7 @@ function App({handleAddTodo}) {
   }
 
   return (
-    <div className="main-container">
+    <div>
       <Header 
         isDarkMode={isDarkMode} 
         handleDarkMode={handleDarkMode} 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import crossIcon from '/images/icon-cross.svg'
 import checkIcon from '/images/icon-check.svg'
 
-export default function TodoItem( { todo, onDeleteTodo, onMarkComplete }) {
+export default function TodoItem( { todo, onDeleteTodo, onMarkComplete, isDarkMode }) {
 
   const [isHovered, setIsHovered] = useState(false)
   const [isChecked, setIsChecked] = useState(todo.completed)
@@ -18,7 +18,8 @@ export default function TodoItem( { todo, onDeleteTodo, onMarkComplete }) {
             setIsChecked(!isChecked)
             onMarkComplete(todo.id)
           }}
-          className={isChecked ? 'todo-circle-checked' : 'todo-circle'}>
+          className={`${isChecked ? 'todo-circle-checked' : 'todo-circle'}
+          ${isDarkMode ? 'todo-circle-dark' : ''}`}>
           {isChecked ? <img src={checkIcon}/> : null}  
           </div>
         

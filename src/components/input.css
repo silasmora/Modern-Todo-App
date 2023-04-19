@@ -6,7 +6,7 @@
   width: 40%;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 25%;
   padding: .8em 1.2em;
   background-color: var(--color-light-gray);
   display: flex;
@@ -21,7 +21,7 @@
   width: 40%;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 25%;
   padding: .8em 1.2em;
   background-color: var(--color-very-dark-desaturated-blue);
   display: flex;

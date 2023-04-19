@@ -8,16 +8,17 @@ export default function TodoList({ isDarkMode }) {
   const [todos, setTodos] = useState([])
   const [filter, setFilter] = useState('all')
 
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos])
-
+  
   useEffect(() => {
     const savedTodos = JSON.parse(localStorage.getItem('todos'))
     if (savedTodos) {
       setTodos(savedTodos)
     }
   }, [])
+  
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   function handleAddTodo(todo) {
     setTodos([...todos, todo])

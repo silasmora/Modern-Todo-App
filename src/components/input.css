@@ -6,9 +6,10 @@
   width: 40%;
   left: 0;
   right: 0;
-  top: 25%;
+  top: 20%;
   padding: .8em 1.2em;
   background-color: var(--color-light-gray);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
 }
@@ -21,7 +22,7 @@
   width: 40%;
   left: 0;
   right: 0;
-  top: 25%;
+  top: 20%;
   padding: .8em 1.2em;
   background-color: var(--color-very-dark-desaturated-blue);
   display: flex;

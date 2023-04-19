@@ -3,7 +3,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 38%;
+  top: 30%;
   width: 40%;
   background-color: var(--color-light-gray);
   color: var(--color-very-dark-grayish-blue);
@@ -17,7 +17,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 38%;
+  top: 30%;
   width: 40%;
   background-color: var(--color-very-dark-desaturated-blue);
   color: var(--color-light-grayish-blue-dark-theme);
